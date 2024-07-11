@@ -14,6 +14,10 @@ from pathlib import Path
 import os
 from dotenv import load_dotenv
 from datetime import timedelta
+from decouple import Config
+
+config = Config()
+
 
 load_dotenv()
 
@@ -25,10 +29,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-mxy9kl-$$3l9qzo(q5fr=u6!de6yo-&1nvwe-s@!hl9sm0_x9b"
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = ["*"]
 
@@ -119,15 +123,15 @@ DATABASES = {
 
         'ENGINE': 'django.db.backends.postgresql',
 
-        'NAME': 'Yumster',
+        'NAME': config('DB_NAME'),
 
-        'USER': 'praveen',
+        'USER': config('DB_USER'),
 
-        'PASSWORD': 'masterpraveen',
+        'PASSWORD': config('DB_PASSWORD'),
 
-        'HOST': 'yumsteraws.cja4iommkv1z.us-east-2.rds.amazonaws.com',
+        'HOST': config('DB_HOST'),
 
-        'PORT': '5432',
+        'PORT': config('DB_PORT', default='5432'),
     }
 }
 
