@@ -1,0 +1,248 @@
+.profile-container {
+    background: #141414;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 120px; /* Ensure space for navbar and search bar */
+    position: relative;
+    padding-bottom: 50px;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: flex-end; /* Adjust to move the hamburger menu to the right */
+    align-items: center;
+    width: 100%;
+    background: #000;
+    padding: 30px 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+  
+  .menu-toggle {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 80px; /* Adjust margin to move hamburger to the right */
+  }
+  
+  .hamburger {
+    width: 55px;
+    height: 5px;
+    background-color: #fff;
+    margin: 3px 0;
+    transition: transform 0.3s ease;
+  }
+  
+  .menu-toggle:hover .hamburger {
+    transform: scaleX(1.2);
+  }
+  
+  .menu {
+    position: absolute;
+    top: 80px;
+    right: 80px;
+    background: #000;
+    border-radius: 8px;
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 10;
+  }
+  
+  .nav-item {
+    color: #fff;
+    font-size: 45px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-item:hover {
+    background-color: #e50914;
+  }
+  
+  .content {
+    width: 100%;
+    max-width: 1300px; /* Adjust max-width as needed */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .search-bar {
+    position: fixed;
+    top: 120px; /* Adjust based on navbar height */
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center search bar horizontally */
+    align-items: center;
+    padding: 20px 0; /* Padding top and bottom */
+    z-index: 99; /* Ensure search bar is above content */
+  }
+  
+  .search-input {
+    height: 60px; /* Height of the search input */
+    width: 400px; /* Adjust width as needed */
+    padding: 0 20px; /* Adjust padding */
+    border: none;
+    border-radius: 30px; /* Rounded corners */
+    font-size: 18px; /* Font size */
+    color: #fff; /* Text color */
+    background-color: #333; /* Darker background color */
+    outline: none; /* Remove default outline */
+  }
+  
+  .search-input::placeholder {
+    color: #999; /* Placeholder text color */
+  }
+  
+  .search-button {
+    height: 60px; /* Height of the search button */
+    padding: 0 20px;
+    background-color: #e50914; /* Netflix red */
+    color: #fff; /* Text color */
+    border: none;
+    border-radius: 30px; /* Rounded corners */
+    cursor: pointer;
+    font-size: 18px; /* Font size */
+    transition: background-color 0.3s ease;
+  }
+  
+  .search-button:hover {
+    background-color: #ff0f29; /* Lighter red on hover */
+  }
+  
+  .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin-top: 150px; /* Adjust top margin to create space */
+  }
+  
+  .recipe-card {
+    background-color: #141414;
+    color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .recipe-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .recipe-image {
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .recipe-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .recipe-details {
+    padding: 20px;
+  }
+  
+  .recipe-details h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #fff; /* Title color */
+  }
+  
+  .recipe-details p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #999; /* Description color */
+  }
+  
+  .recipe-details a {
+    text-decoration: none;
+    color: #fff; /* Link color */
+    transition: color 0.3s ease;
+  }
+  
+  .recipe-details a:hover {
+    color: #e50914; /* Hover color */
+  }
+  
+  .search-bar {
+    position: sticky; /* Fixed position */
+    top: 120px; /* Adjust based on navbar height */
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center search bar horizontally */
+    align-items: center;
+    padding: 20px 0; /* Padding top and bottom */
+    z-index: 99; /* Ensure search bar is above content */
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 20px; /* Distance from bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%);
+    width: fit-content;
+  }
+  
+  .pagination-button {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #e50914; /* Netflix red */
+    padding: 10px 20px; /* Larger padding */
+    margin: 0 5px; /* Space between buttons */
+    cursor: pointer;
+    font-size: 16px; /* Slightly larger font size */
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .pagination-button:hover {
+    background-color: #e50914; /* Netflix red on hover */
+    color: #fff; /* White text on hover */
+  }
+  
+  
+  .no-recipes {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .post-recipe-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #e50914;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .post-recipe-button:hover {
+    background-color: #ff0f29;
+  }
+  
+  
+  

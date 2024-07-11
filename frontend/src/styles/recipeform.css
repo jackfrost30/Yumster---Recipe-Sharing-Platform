@@ -1,0 +1,177 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #141414;
+  color: #ffffff;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #141414;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.menu-toggle {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+}
+
+.menu {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.nav-item {
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.nav-item:hover {
+  background-color: #e50914;
+}
+
+/* Recipe Form Container */
+.recipe-form-container {
+  padding: 100px 20px 20px;
+  width: 500px;
+  max-width: 100%;
+  margin: 120px auto 20px;
+  background-color: #222;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  position: relative; /* Ensure relative positioning for absolute elements */
+}
+
+.recipe-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.recipe-form h2 {
+  color: #e50914;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-group label {
+  font-weight: bold;
+}
+
+.form-group input[type='text'],
+.form-group textarea,
+.form-group input[type='file'] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+.form-group .formatted-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.form-group .formatted-list li,
+.form-group .formatted-list ol li {
+  background-color: #444;
+  padding: 5px;
+  margin: 5px 0;
+  border-radius: 3px;
+}
+
+.submit-button {
+  padding: 15px;
+  background-color: #e50914;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #d40812;
+}
+
+/* Back Button */
+.back-button {
+  background-color: #e50914;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.back-button:hover {
+  background-color: #d40812;
+}
+
+.recipe-form-container .form-group textarea {
+  height: auto; /* Allow textarea to grow with content */
+}
+
+.recipe-form-container .form-group .formatted-list {
+  max-height: 100px;
+  overflow-y: auto;
+  margin-top: 10px;
+}
+
+/* Ensure the form stays within the visible area */
+.recipe-form {
+  max-height: calc(100vh - 160px);
+  overflow-y: auto;
+}
