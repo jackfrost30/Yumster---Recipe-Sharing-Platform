@@ -14,9 +14,7 @@ from pathlib import Path
 import os
 from dotenv import load_dotenv
 from datetime import timedelta
-from decouple import Config
-
-config = Config()
+from decouple import config
 
 
 load_dotenv()
