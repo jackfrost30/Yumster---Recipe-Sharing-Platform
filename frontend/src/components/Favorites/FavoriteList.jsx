@@ -44,13 +44,13 @@ const FavoriteList = () => {
         },
       });
 
-      const baseURL = import.meta.env.VITE_API_URL;
-      const processedRecipes = response.data.map((recipe) => ({
-        ...recipe,
-        image: `${baseURL}${recipe.image}`,
-      }));
+      // const baseURL = import.meta.env.VITE_API_URL;
+      // const processedRecipes = response.data.map((recipe) => ({
+      //   ...recipe,
+      //   image: `${baseURL}${recipe.image}`,
+      // }));
 
-      setFavoriteRecipes(processedRecipes);
+      setFavoriteRecipes(response.data);
       // setPageInfo(response.data);
     } catch (error) {
       console.error('Error fetching user favorite recipes:', error);
