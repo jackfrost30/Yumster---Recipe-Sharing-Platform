@@ -22,7 +22,12 @@ Yumster! is a recipe sharing platform designed to simplify how users create, man
 3. Run the frontend using `npm start`.
 4. Set up the Django backend and PostgreSQL database.
 5. Create a `.env` file in the backend/recipes_platform/recipes_platform directory and add environment variables like DB details and secret key.
-6. Install backend dependencies using `pip install -r requirements.txt`. 
+6. Install backend dependencies using `pip install -r requirements.txt`.
+
+## Website
+
+Visit [Yumster!](https://yumsterhub.pythonanywhere.com/) to explore recipes and start sharing today!
+
 
 ## Contributing
 
