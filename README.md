@@ -17,10 +17,12 @@ Yumster! is a recipe sharing platform designed to simplify how users create, man
 
 ## Getting Started
 
-1. Clone this repository.
+1. Clone this repository using `git clone <repository_url>`.
 2. Install dependencies using `npm install` in the `frontend` directory.
 3. Run the frontend using `npm start`.
 4. Set up the Django backend and PostgreSQL database.
+5. Create a `.env` file in the backend/recipes_platform/recipes_platform directory and add environment variables like DB details and secret key.
+6. Install backend dependencies using `pip install -r requirements.txt`. 
 
 ## Contributing
 
